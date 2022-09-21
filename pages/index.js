@@ -7,6 +7,7 @@ import { Header } from "../components/Header";
 import { SearchIcon, MicrophoneIcon } from "@heroicons/react/solid";
 import Footer from "../components/Footer";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 export default function Home() {
   const router = useRouter();
@@ -31,11 +32,11 @@ export default function Home() {
 
       {/* Body */}
       <form className="flex flex-col items-center mt-40">
-        <img
+        <Image
           objectFit="cover"
           width="300"
           height="100"
-          src="https://play-lh.googleusercontent.com/1-hPxafOxdYpYZEOKzNIkSP43HXCNftVJVttoo4ucl7rsMASXW3Xr6GlXURCubE1tA=w3840-h2160-rw"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png"
         />
         <div className="flex w-full mt-5 mx-auto max-w-[90%] border border-gray-200 hover:shadow-lg focus-within:shadow-lg px-5 py-3 rounded-full items-center sm:max-w-xl lg:max-w-2-xl">
           <SearchIcon className="h-5 text-gray-500 mr-3" />
