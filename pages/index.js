@@ -1,6 +1,4 @@
-/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable jsx-a11y/alt-text */
-/* eslint-disable @next/next/no-img-element */
 import { useRef } from "react";
 import Head from "next/head";
 import { Header } from "../components/Header";
@@ -51,7 +49,7 @@ export default function Home() {
           <button onClick={search} className="btn">
             Google Search
           </button>
-          <button className="btn">I'm Feeling Lucky</button>
+          <button className="btn">{"I'm Feeling Lucky"}</button>
         </div>
       </form>
 
