@@ -1,21 +1,31 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 import React from "react";
+import ImageResults from "../components/ImageResults";
 import SearchHeader from "../components/SearchHeader";
 import { SearchResults } from "../components/SearchResults";
 import response from "../response";
 
 export default function Search({ results }) {
   const router = useRouter();
+
+  const {
+    query: { term, searchType },
+  } = router;
+
   return (
     <div>
       <Head>
-        <title>{router.query.term} - Search Page</title>
+        <title>{term} - Search Page</title>
       </Head>
 
       <SearchHeader />
 
-      <SearchResults results={results} />
+      {searchType === "image" ? (
+        <ImageResults results={results} />
+      ) : (
+        <SearchResults results={results} />
+      )}
     </div>
   );
 }
